@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.3/dist/tippy.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.3/dist/tippy.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <style>
         .table-peachpuff tbody tr:nth-child(odd) {
             background-color: rgb(115, 0, 255);
@@ -30,8 +32,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Library Logo" class="img-fluid max-height-100" />
+            <a class="navbar-brand" href="#home">
+                <div class="logo-container">
+                    <img src="img/Logo.png" alt="Library Logo" class="img-fluid max-height-100" />
+                    <h1 class="library-name">Woodlands Library</h1> <!-- Text next to the logo as h1 -->
+                </div>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -39,42 +44,100 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+            <div class="collapse navbar-collapse ms-auto mb-2 mb-lg-0" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">
+                            <i class="bi bi-house-fill"></i>
+                            <span>Home</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Stats</a>
+                        <a class="nav-link" href="#booksSection">
+                            <i class="bi bi-book-half"></i>
+                            <span>Booklist</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inventory</a>
+                        <a class="nav-link" href="#chart">
+                            <i class="bi bi-bar-chart-fill"></i>
+                            <span>Statistics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inventorySection">
+                            <i class="bi bi-list-nested"></i>
+                            <span>Inventory</span>
+                        </a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
-
-    <section class="container mt-4">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." id="searchInput" />
-                    <button class="btn btn-peach" type="button">Search</button>
+    <section id="home">
+        
+        <div class="container-fluid front-bg shadow-lg" style="padding-bottom: 50px;">
+            <div class="container text-center">
+                <div class="row text-light pt-5">
+                    <div class="col-md-6">
+                        <img class="img-fluid" style="width:1500px; height:400px;" src="img/library.jpg">
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="mt-4">Welcome to Woodlands Library!</h1>
+                        <p class="lead ps-2">Welcome to Woodlands Library, your digital haven for diverse reading
+                            adventures! Explore Fiction, Science Fiction, Adventure, Biographies, Manga, and more!</p>
+                        <button class="btn btn-blue" onclick="window.location.href='#booksSection'">View Books</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+
     <section class="container mt-4" id="booksSection">
+        <section class="container mt-4">
+            <h2 class="section-header">Book List</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="searchInput" />
+                        <button class="btn btn-blue" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="row" id="bookCardsContainer"></div>
     </section>
 
-    <section class="container mt-4">
-        <canvas id="reservationChart" width="400" height="200"></canvas>
+    <section class="container mt-4" id="chart">
+        <h2 class="section-header">Statistics</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <canvas id="reservationChart" class="d-block w-100" width="400" height="200"></canvas>
+                </div>
+                <div class="carousel-item">
+                    <div id="pieChartContainer">
+                    <canvas id="reservationPieChart" class="d-block w-100" width="400" height="200"></canvas>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
     </section>
-
     <section class="container mt-4" id="inventorySection">
+        <h2 class="section-header">Inventory</h2>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
@@ -89,13 +152,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Your table rows go here -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="bg-primary mt-4 pt-4">
+        <hr class="my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-light">
+                    <p>&copy; 2024 Woodlands Library</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#home" class="text-light text-decoration-none me-3">Home</a>
+                    <a href="#booksSection" class="text-light text-decoration-none me-3">Book List</a>
+                    <a href="#chart" class="text-light text-decoration-none me-3">Charts</a>
+                    <a href="#inventorySection" class="text-light text-decoration-none me-3">Inventory</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 
     <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -105,15 +185,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modalBody">
+                    <img src="" alt="" class="img-fluid" style="max-width: 200px; max-height: 200px;">
                 </div>
             </div>
         </div>
     </div>
 
 
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/tippy.js@6.3.3/dist/tippy-bundle.umd.js"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>

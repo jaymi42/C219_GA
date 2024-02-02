@@ -1,6 +1,6 @@
 var booksData = [
   {
-    id: 0,
+    id: 1,
     title: "Atomic Habits",
     author: "James Clear",
     genre: "Self-Improvement",
@@ -9,10 +9,10 @@ var booksData = [
     image: "img/atomic.jpg",
     reserved: false,
     description:
-      "A powerful book on building good habits and breaking bad ones.",
+      "Learn how small changes can lead to remarkable results in 'Atomic Habits' by James Clear."
   },
   {
-    id: 1,
+    id: 2,
     title: "Interesting Facts For Curious Minds",
     author: "Jordan Moore",
     genre: "Trivia",
@@ -21,10 +21,10 @@ var booksData = [
     image: "img/interesting.jpg",
     reserved: true,
     description:
-      "A book that contains useful, worthless but undeniably interesting facts that you can impress your friends and family with.",
+      "Discover a treasure trove of fascinating trivia in 'Interesting Facts For Curious Minds' by Jordan Moore."
   },
   {
-    id: 2,
+    id: 3,
     title: "Elon Musk",
     author: "Walter Isaacson",
     genre: "Biography",
@@ -36,19 +36,19 @@ var booksData = [
       "From the author of Steve Jobs and other bestselling biographies, this is the astonishingly intimate story of the most fascinating and controversial innovator of our era--a rule-breaking visionary who helped to lead the world into the era of electric vehicles, private space exploration, and artificial intelligence.",
   },
   {
-    id: 3,
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    genre: "Classic",
-    year: "1925",
+    id: 4,
+    title: "Think Faster Talk Smarter",
+    author: "Matt Abrahams",
+    genre: "Self-Help",
+    year: "2022",
     type: "Hardcover",
     image: "img/think.jpg",
     reserved: false,
     description:
-      "A classic novel that explores the decadence of the Jazz Age and the American Dream.",
+      "In 'Think Faster Talk Smarter', Matt Abrahams offers practical strategies to enhance communication skills and turbocharge thinking. With actionable techniques backed by research, this book is an indispensable guide for mastering effective communication."
   },
   {
-    id: 4,
+    id: 5,
     title: "Do Androids Dream of Electric Sheep?",
     author: "Philip K. Dick",
     genre: "Science Fiction",
@@ -60,7 +60,7 @@ var booksData = [
       "A science fiction novel set in a post-apocalyptic future where androids are indistinguishable from humans, exploring themes of empathy and identity."
   },
   {
-    id: 5,
+    id: 6,
     title: "Dune",
     author: "Frank Herbert",
     genre: "Science Fiction",
@@ -72,31 +72,31 @@ var booksData = [
       "A science fiction epic set in a distant future where noble houses vie for control of the desert planet Arrakis, known for its valuable spice melange."
   },
   {
-    id: 6,
-    title: "Neuromancer",
-    author: "William Gibson",
-    genre: "Science Fiction",
-    year: "1984",
-    type: "eBook",
-    image: "img/neuro.jpg",
+    id: 7,
+    title: "Jujutsu Kaisen",
+    author: "Gege Akutami",
+    genre: "Manga",
+    year: "2018",
+    type: "Paperback",
+    image: "img/jjk.jpg",
     reserved: false,
     description:
-      "A seminal cyberpunk novel that follows a washed-up computer hacker hired to pull off the ultimate hack, blurring the lines between reality and cyberspace."
-  },
-  {
-    id: 7,
-    title: "Foundation",
-    author: "Isaac Asimov",
-    genre: "Science Fiction",
-    year: "1951",
-    type: "Paperback",
-    image: "img/foundation.jpg",
-    reserved: true,
-    description:
-      "The first book in the Foundation series, exploring the collapse and rebirth of a galactic empire through the science of psychohistory."
+      "Follow Yuji Itadori, a high school student with exceptional physical abilities, as he joins a secret organization of Jujutsu Sorcerers to exterminate cursed beings known as Curses."
   },
   {
     id: 8,
+    title: "Chainsaw Man",
+    author: "Tatsuki Fujimoto",
+    genre: "Manga",
+    year: "2018",
+    type: "Paperback",
+    image: "img/csm.jpg",
+    reserved: true,
+    description:
+      "Enter the bizarre world of Denji, a devil hunter who merges with his pet devil Pochita to become the Chainsaw Man, embarking on a quest to repay his deceased father's debts."
+  },
+  {
+    id: 9,
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
     genre: "Fiction",
@@ -108,7 +108,7 @@ var booksData = [
       "A classic novel set in the Roaring Twenties, exploring themes of wealth, love, and the American Dream."
   },
   {
-    id: 9,
+    id: 10,
     title: "The Adventures of Tom Sawyer",
     author: "Mark Twain",
     genre: "Adventure",
@@ -120,7 +120,7 @@ var booksData = [
       "A classic adventure novel following the mischievous young boy Tom Sawyer as he navigates life along the Mississippi River."
   },
   {
-    id: 10,
+    id: 11,
     title: "The Diary of a Young Girl",
     author: "Anne Frank",
     genre: "Biography",
@@ -130,18 +130,6 @@ var booksData = [
     reserved: false,
     description:
       "The personal diary of Anne Frank, a Jewish girl hiding from the Nazis during World War II, providing a poignant account of life during the Holocaust."
-  },
-  {
-    id: 11,
-    title: "Alice's Adventures in Wonderland",
-    author: "Lewis Carroll",
-    genre: "Fantasy",
-    year: "1865",
-    type: "Hardcover",
-    image: "img/wonderland.jpg",
-    reserved: false,
-    description:
-      "A whimsical fantasy novel following Alice's journey through a fantastical world filled with peculiar characters and nonsensical situations."
   },
   {
     id: 12,

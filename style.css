@@ -1,35 +1,83 @@
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+
+}
+
 body {
-  background-color: #f8f9fa;
+  background-color: #002a69;
 }
 
 .navbar {
-  background-color: rgb(115, 0, 255);
-  border-bottom: 1px solid rgb(115, 0, 255);
+  background-color: #2278c9;
+  border-bottom: 1px solid #3572e4;
 }
 
-.navbar-brand img {
+.front-bg {
+  background-color: #0a348d;
+  padding: 100px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.logo-container img {
   max-height: 80px;
-  margin-left: 10px;
-  padding-right: 1200px;
-  margin-left: 100px;
+  margin-right: 10px; /* Add some spacing between the text and the logo */
+}
+
+.logo-container h1 {
+  margin-top: 25px;
+  padding-right: 1000px;
+}
+
+.library-name {
+  margin-right: 10px;
+  color: white; /* Add some spacing between the logo and the text */
 }
 
 .navbar-brand,
 .navbar-nav a {
-  color: black;
+  color: white !important;
+  font-weight: bold;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.navbar-brand,
+.navbar-nav a:hover {
+  color: rgb(59, 59, 59) !important;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .navbar-toggler-icon {
-  background-color: #fff;
+  color: #fff;
 }
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 5px; /* Adjust as needed */
+}
+
 
 .navbar-toggler {
   border-color: #fff;
+  background-color: #fff;
 }
 
 .navbar-toggler:hover,
 .navbar-toggler:focus {
-  background-color: rgb(75, 0, 167);
+  background-color: #575757;
 }
 
 .navbar-nav {
@@ -39,55 +87,160 @@ body {
 
 .input-group {
   margin-top: 10px;
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
 
 .input-group-append button {
-  background-color: rgb(115, 0, 255);
-  border-color: rgb(115, 0, 255);
+  background-color: #0050c7;
+  border-color: #0050c7;
   color: #fff;
 }
 
 .input-group-append button:hover {
-  background-color: rgb(67, 0, 149);
-  border-color: rgb(67, 0, 149);
+  background-color: #002395;
+  border-color: #002395;
 }
 
-.btn-peach {
-  background-color: rgb(115, 0, 255);
-  border-color: rgb(115, 0, 255);
-  color: black;
+.btn-blue {
+  background-color: #0050c7;
+  border-color: #0050c7;
+  color: rgb(255, 255, 255);
 }
 
-.btn-peach:hover {
-  background-color: rgb(67, 0, 149);
-  border-color: rgb(67, 0, 149);
-  color: #fff;
+.btn-blue:hover {
+  background-color: #002395;
+  border-color: #002395;
+  color: #c0c0c0;
 }
 
 .card {
-  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card-img-top {
-  max-height: 100%;
-  object-fit: cover;
+  height: 450px;
+  border-radius: 25px;
+  object-fit: fill;
+}
+
+.card-body {
+  flex-grow: 1; /* Allow the card body to take up remaining space */
+}
+
+.reserve-btn {
+  width: 100%; /* Make the button fill the entire width of the card */
 }
 
 .card-footer {
   text-align: center;
 }
 
+.book-card {
+  background-color: #003b94; /* Dark blue background */
+  color: white; /* White text */
+  padding: 5px;
+  border-radius: 25px; /* Add some border-radius for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.book-card:hover {
+  animation: pulse 1s forwards;
+
+}
+
+.modal-content {
+  background-color: #002a69; /* Dark blue background */
+  color: white; /* White text */
+  border-radius: 10px; /* Add some border-radius for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+
 .book-cards-section {
   height: 80vh;
   overflow-y: auto;
 }
 
-.chart-container {
-  width: 100%;
-  height: 80vh;
-}
+
 
 #inventoryTable {
   table-layout: fixed;
   width: 100%;
+  border-radius: 25px;
+}
+
+#reservationChart {
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+#pieChartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reservationPieChart {
+  max-width: 700px; 
+  max-height: 700px;
+
+
+}
+
+.section {
+  padding-bottom: 20px; 
+}
+
+.section-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+tr {
+  background-color: #1c44b1;
+}
+
+th {
+  color: #ffffff;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  color: #ffffff; /* Change the text color */
+  background-color: #ccc; /* Change the background color */
+  border: 1px solid #ccc; /* Change the border color */
+  border-radius: 5px; /* Add some border-radius for rounded corners */
+  padding: 5px; /* Add padding for better appearance */
+}
+
+
+.dataTables_wrapper .dataTables_filter label {
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fff; /* Change the button text color */
+  background-color: rgb(255, 255, 255); /* Change the button background color */
+  border: 1px solid transparent; /* Remove the button border */
+  border-radius: 5px; /* Add some border-radius for rounded corners */
+  padding: 5px 10px; /* Add padding for better appearance */
+}
+
+/* Custom styles for DataTable pagination buttons on hover */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: rgb(77, 134, 240); /* Change the button background color on hover */
+}
+
+
+.dataTables_info {
+  color: white;
 }
