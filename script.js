@@ -5,7 +5,7 @@ $(document).ready(function () {
     const isReserved = book.reserved || false;
 
     return `
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 mb-4">
           <div class="card" data-book-id="${book.id
       }" data-bs-toggle="modal" data-bs-target="#bookModal">
             <img src="${book.image}" class="card-img-top" alt="${book.title}">
@@ -21,6 +21,8 @@ $(document).ready(function () {
         </div>
       `;
   }
+
+  
 
 
   function initTooltips() {
