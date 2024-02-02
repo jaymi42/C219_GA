@@ -24,12 +24,12 @@ body {
 
 .logo-container {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
 }
 
 .logo-container img {
   max-height: 80px;
-  margin-right: 10px; /* Add some spacing between the text and the logo */
+  margin-right: 10px;
 }
 
 .logo-container h1 {
@@ -39,7 +39,7 @@ body {
 
 .library-name {
   margin-right: 10px;
-  color: white; /* Add some spacing between the logo and the text */
+  color: white; 
 }
 
 .navbar-brand,
@@ -66,7 +66,7 @@ body {
 }
 
 .navbar-nav .nav-link i {
-  margin-right: 5px; /* Adjust as needed */
+  margin-right: 5px; 
 }
 
 
@@ -128,11 +128,11 @@ body {
 }
 
 .card-body {
-  flex-grow: 1; /* Allow the card body to take up remaining space */
+  flex-grow: 1; 
 }
 
 .reserve-btn {
-  width: 100%; /* Make the button fill the entire width of the card */
+  width: 100%; 
 }
 
 .card-footer {
@@ -140,11 +140,11 @@ body {
 }
 
 .book-card {
-  background-color: #003b94; /* Dark blue background */
-  color: white; /* White text */
+  background-color: #003b94; 
+  color: white; 
   padding: 5px;
-  border-radius: 25px; /* Add some border-radius for rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 25px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .book-card:hover {
@@ -153,10 +153,10 @@ body {
 }
 
 .modal-content {
-  background-color: #002a69; /* Dark blue background */
-  color: white; /* White text */
-  border-radius: 10px; /* Add some border-radius for rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #002a69; 
+  color: white; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -214,30 +214,28 @@ th {
 }
 
 .dataTables_wrapper .dataTables_filter input {
-  color: #ffffff; /* Change the text color */
-  background-color: #ccc; /* Change the background color */
-  border: 1px solid #ccc; /* Change the border color */
-  border-radius: 5px; /* Add some border-radius for rounded corners */
-  padding: 5px; /* Add padding for better appearance */
+  color: #ffffff;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-
 .dataTables_wrapper .dataTables_filter label {
-  color: #ffffff; 
+  color: #ffffff;
   font-weight: bold;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  color: #fff; /* Change the button text color */
-  background-color: rgb(255, 255, 255); /* Change the button background color */
-  border: 1px solid transparent; /* Remove the button border */
-  border-radius: 5px; /* Add some border-radius for rounded corners */
-  padding: 5px 10px; /* Add padding for better appearance */
+  color: #fff;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
-/* Custom styles for DataTable pagination buttons on hover */
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  background-color: rgb(77, 134, 240); /* Change the button background color on hover */
+  background-color: rgb(77, 134, 240);
 }
 
 

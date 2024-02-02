@@ -5,6 +5,7 @@
 //  Note: I initially wanted to make this website with Fullpage.js, but after multiple
 // errors and issues, I decided to use the traditional way of making a website. As much as I wanted to
 // use Fullpage.js, the amount of errors and bugs I encountered was too frustrating and time-consuming.
+//I have added additional notes here to explain the code and the functions used in the script.js file.
 
 // Function to create a book card, first setting its status to reserved or not reserved, then returning the HTML code for the card.
   function createBookCard(book) {
@@ -193,7 +194,7 @@ function reservationChartData() {
                 y: {
                     title: { display: true, text: "Number of Books" },
                     ticks: {
-                        stepSize: 1, // Adjust the step size as needed to display more values
+                        stepSize: 1, 
                         beginAtZero: true,
                         max: 10,
                     }
@@ -224,7 +225,7 @@ function reservationPieChart() {
                     position: 'right',
                     labels: {
                         color: 'white',
-                        render: 'percentage', // Display percentages
+                        render: 'percentage', 
                         fontColor: 'white',
                         fontSize: 14,
                         fontStyle: 'bold',
@@ -232,7 +233,7 @@ function reservationPieChart() {
                 },
                 title: {
                     display: true,
-                    text: 'Books Yet to Be Reserved', // Specify the title text
+                    text: 'Books Yet to Be Reserved', 
                     font: {
                         size: 18,
                         weight: 'bold'
